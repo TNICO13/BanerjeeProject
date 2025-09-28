@@ -92,7 +92,7 @@ df["srv_g_l1"]  = df["srv_g"].shift(1)
 df["mfg_g_l1"]  = df["mfg_g"].shift(1)
 df["exp_g_l1"]  = df["exp_g"].shift(1)
 
-dyn_cols = ["LN_l1","fdi_in","fdi_in_l1","fdi_out","fdi_out_l1",
+dyn_cols = ["fdi_in","fdi_in_l1","fdi_out","fdi_out_l1",
             "srv_g","srv_g_l1","mfg_g","mfg_g_l1","exp_g","exp_g_l1","post2005"]
 X_dyn = sm.add_constant(df[dyn_cols])
 y_dyn = df["LN"]
